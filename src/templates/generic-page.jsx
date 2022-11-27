@@ -29,8 +29,8 @@ const GenericPage = ({data, pageContext}) => {
 }
 
 export const query = graphql`
-    query PageQuery($pageId: String!) {
-         page: datoCmsPage(originalId: {eq: $pageId}) {
+    query PageQuery($slug: String!) {
+         page: datoCmsPage(slug: {eq: $slug}) {
     title
     slug
     sections {

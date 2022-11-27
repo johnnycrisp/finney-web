@@ -12,6 +12,7 @@
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-sass": "^6.2.0",
     "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-remark-embed-video": "^3.2.1",
     "gatsby-source-datocms": "^4.0.5",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
