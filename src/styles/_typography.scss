@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400&display=swap');
+
+$font-primary: 'Archivo', sans-serif;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.18s linear all;
+}
+
+body {
+  color: black;
+  font-family: $font-primary;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}

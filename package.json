@@ -1,18 +1,27 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sam-finney",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A website including pleasing videos",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "bootstrap": "^5.2.3",
+    "components": "^0.1.0",
     "gatsby": "^5.0.0",
-    "gatsby-plugin-image": "^3.0.0",
+    "gatsby-plugin-image": "^3.1.0",
     "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-sass": "^6.2.0",
     "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-source-datocms": "^4.0.5",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.6.0",
+    "react-datocms": "^4.0.7",
+    "react-dom": "^18.2.0",
+    "sass": "^1.56.1",
+    "styled": "^1.0.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
