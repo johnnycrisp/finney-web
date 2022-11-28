@@ -5,9 +5,17 @@ import Link from "./Link"
 
 const VidStyles = styled.div`
   .gatsby-image-wrapper.col-image {
-    height: 300px;
+    height: 350px;
     width: 100%;
   }
+
+  a {
+  margin-bottom: 2rem;
+  &:hover {
+    text-decoration: underline;
+    color: black;
+  }
+}
   ` 
 
 const GridColumn = ({id, text, image}) => {

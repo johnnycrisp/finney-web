@@ -7,6 +7,12 @@ import Seo from "../components/Seo"
 
 const IndexStyles = styled.div`
   padding: 1rem;
+  a {
+    
+    &:hover {
+        text-decoration: underline;
+    }
+  }
 
 `
 

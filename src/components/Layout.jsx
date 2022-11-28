@@ -10,10 +10,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../styles/main.scss"
 import Header from "./Header"
 import styled from 'styled-components'
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+
 // import Seo from "./Seo"
 
 const FooterStyles = styled.div`
   display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -37,6 +41,7 @@ const Layout = ({ children, pageData }) => {
   `)
 console.log('daatatata', data)
 console.log('first', pageData)
+const image = `src/images/SF-Copy-white.jpg`
   return (
     
     <>
@@ -45,8 +50,8 @@ console.log('first', pageData)
      
         <main>{children}</main>
         <FooterStyles>
-        <div>© {new Date().getFullYear()} &middot; Sam Finney</div>
-          
+        <div>London-based DOP & Shooting Director</div>
+        <StaticImage src="../images/SF-Copy-white.jpg" alt="sam finney logo" />
         </FooterStyles>
   
     </>

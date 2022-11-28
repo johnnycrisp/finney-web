@@ -14,6 +14,9 @@ const HeaderStyles = styled.div`
     color: black;
     text-decoration: none;
     font-size: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
    a + a {
       margin-left: 1rem;
