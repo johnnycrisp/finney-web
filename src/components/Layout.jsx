@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../styles/main.scss"
 import Header from "./Header"
 import styled from 'styled-components'
-import Seo from "./Seo"
+// import Seo from "./Seo"
 
 const FooterStyles = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const FooterStyles = styled.div`
 
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageData }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
   site {
@@ -36,11 +36,12 @@ const Layout = ({ children }) => {
 }
   `)
 console.log('daatatata', data)
+console.log('first', pageData)
   return (
     
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Seo title={data.datoCmsPage.title}/>
+      {/* <Seo title={data.datoCmsPage.title}/> */}
      
         <main>{children}</main>
         <FooterStyles>

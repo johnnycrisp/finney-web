@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Layout from '../components/Layout'
 import Section from '../components/Section';
+import Seo from '../components/Seo';
 
 const PageStyles = styled.div`
   padding: 1rem;
@@ -17,7 +18,9 @@ const GenericPage = ({data, pageContext}) => {
     console.log('data', page, pageContext)
 
   return (
+    <>
     <Layout>
+    <Seo title={page.title}/>
     <PageStyles>
     <h1>{page.title}</h1>
     {page.sections.map(section => (
@@ -25,6 +28,7 @@ const GenericPage = ({data, pageContext}) => {
     ))}
     </PageStyles>
     </Layout>
+    </>
   )
 }
 

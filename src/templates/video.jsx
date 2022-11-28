@@ -2,17 +2,31 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components';
 import Layout from '../components/Layout'
-import Section from '../components/Section';
+import Seo from '../components/Seo';
 import VideoFrame from '../components/VideoFrame';
 
 const VideoPageStyles = styled.div`
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .vp-center {
+    justify-content: flex-start;
+  }
   .gatsby-image-wrapper {
     padding: 0;
+    
   }
-  .video {
-    justify-content: left !important;
-  }
+  .title {
+justify-self: center;
+margin-bottom: 2rem; 
+}
+.description {
+  text-align: center;
+  width: 20%;
+  margin-top: 2rem;
+}
 `
 
 const VideoPage = ({data, pageContext}) => {
@@ -23,10 +37,11 @@ const VideoPage = ({data, pageContext}) => {
 
   return (
     <Layout>
+    <Seo title={video.externalVideo.title}/>
     <VideoPageStyles>
-    <h1 dangerouslySetInnerHTML={{__html: video.text}}></h1>
-    
+    <div className="title" dangerouslySetInnerHTML={{__html: video.text}}></div>
     <VideoFrame videoSrcURL={videoId} videoTitle={video.externalVideo.title}></VideoFrame>
+    <div className="description" dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
     </VideoPageStyles>
     </Layout>
   )

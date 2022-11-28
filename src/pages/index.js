@@ -7,13 +7,14 @@ import Seo from "../components/Seo"
 
 const IndexStyles = styled.div`
   padding: 1rem;
+
 `
 
 const Index = ({data}) => {
     const sections = data.datoCmsPage.sections
     return ( 
     <Layout>
-  <Seo />
+  <Seo title="Home"/>
   <IndexStyles>
   {sections.map((section)=> {
     return (
