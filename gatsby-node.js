@@ -85,7 +85,6 @@ async function turnVideosIntoPages({ graphql, actions }) {
   videos: allDatoCmsVideoGridColumn {
     nodes {
       originalId
-      text
       title
       videoSlug
       videoDetails

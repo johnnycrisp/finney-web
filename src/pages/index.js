@@ -1,6 +1,7 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
+import DropDown from "../components/DropDown"
 import Layout from "../components/Layout"
 import Section from "../components/Section"
 import Seo from "../components/Seo"
@@ -14,6 +15,7 @@ const IndexStyles = styled.div`
     }
   }
 
+
 `
 
 const Index = ({data}) => {
@@ -21,7 +23,9 @@ const Index = ({data}) => {
     return ( 
     <Layout>
   <Seo title="Home"/>
+  
   <IndexStyles>
+  <DropDown />
   {sections.map((section)=> {
     return (
         <Section key={section.originalId} gridColumns={section.gridColumns} />
@@ -37,10 +41,13 @@ export const query = graphql`
     query HomeQuery {
   datoCmsPage(slug: {eq: "index"}) {
     title
+    text
+    image {
+      gatsbyImageData(placeholder: BLURRED)
+    }
     slug
     sections {
       gridColumns {
-        text
         title
         videoSlug
         originalId

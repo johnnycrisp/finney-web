@@ -11,6 +11,7 @@ import "../styles/main.scss"
 import Header from "./Header"
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
+import Link from "./Link"
 
 // import Seo from "./Seo"
 
@@ -49,7 +50,7 @@ const image = `src/images/SF-Copy-white.jpg`
         <main>{children}</main>
         <FooterStyles>
         <div>London-based DOP & Shooting Director</div>
-        <StaticImage src="../images/SF-Copy-white.jpg" alt="sam finney logo" />
+        <Link to=""><StaticImage src="../images/SF-Copy-white.jpg" alt="sam finney logo" /></Link>
         </FooterStyles>
   
     </>

@@ -25,7 +25,7 @@ margin-bottom: 2rem;
 }
 .description {
   text-align: center;
-  width: 20%;
+  width: 30%;
   margin: 2rem;
 }
 
