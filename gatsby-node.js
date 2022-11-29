@@ -86,6 +86,8 @@ async function turnVideosIntoPages({ graphql, actions }) {
     nodes {
       originalId
       text
+      title
+      videoSlug
       videoDetails
       columnImage {
         gatsbyImageData
@@ -103,10 +105,10 @@ async function turnVideosIntoPages({ graphql, actions }) {
   data.videos.nodes.forEach((video) => {
     actions.createPage({
       // The url for the new page
-      path: `/${video.originalId}`,
+      path: `/${video.videoSlug}`,
       component: videoTemplate,
       context: {
-        slug: video.originalId,
+        slug: video.videoSlug,
         videoId: video.originalId,
       },
     });

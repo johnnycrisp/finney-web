@@ -10,7 +10,9 @@ const VidStyles = styled.div`
   }
 
   a {
-  margin-bottom: 2rem;
+  p {
+    margin-bottom: 2rem;
+    }
   &:hover {
     text-decoration: underline;
     color: black;
@@ -18,12 +20,12 @@ const VidStyles = styled.div`
 }
   ` 
 
-const GridColumn = ({id, text, image}) => {
+const GridColumn = ({slug, vidTitle, image}) => {
+  console.log(vidTitle)
   return (
       <VidStyles>
       <GatsbyImage className="col-image" image={getImage(image)}/>
-      <Link to={`${id}`}><div dangerouslySetInnerHTML={{__html: text}}>
-      </div></Link>
+      <Link to={`${slug}`}><p>{vidTitle}</p></Link>
       </VidStyles>
   )
 }

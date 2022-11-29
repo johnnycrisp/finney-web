@@ -15,15 +15,16 @@ const SectionStyles = styled.div`
 `
 
 const Section = ({gridColumns}) => {
-
+console.log(gridColumns)
   return (
     <SectionStyles className="section">
       
             {gridColumns.map(gridCol => (
                 <GridColumn
+                slug={gridCol.videoSlug}
                 id={gridCol.originalId}
                 key={gridCol.originalId}
-                text={gridCol.text}
+                vidTitle={gridCol.title}
                 image={gridCol.columnImage}>
                 </GridColumn>
             ))}

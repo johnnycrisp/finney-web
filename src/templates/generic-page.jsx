@@ -39,8 +39,12 @@ export const query = graphql`
     slug
     sections {
       gridColumns {
-        text
+        title
+        videoSlug
         originalId
+        externalVideo {
+          title
+        }
         columnImage {
           gatsbyImageData(placeholder: BLURRED)
         }

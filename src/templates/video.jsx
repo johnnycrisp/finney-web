@@ -49,7 +49,7 @@ const VideoPage = ({data, pageContext}) => {
     <Layout>
     <Seo title={video.externalVideo.title}/>
     <VideoPageStyles>
-    <div className="title" dangerouslySetInnerHTML={{__html: video.text}}></div>
+    <div className="title" dangerouslySetInnerHTML={{__html: video.title}}></div>
     <VideoFrame videoSrcURL={videoId} videoTitle={video.externalVideo.title}></VideoFrame>
     <div className="description" dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
     <Link className="back-link" to="">&larr; Back</Link>
@@ -62,7 +62,8 @@ export const query = graphql`
 query VideoTitleQuery($videoId: String) {
   video: datoCmsVideoGridColumn(originalId: {eq: $videoId}) {
     originalId
-    text
+    title
+    videoSlug
     videoDetails
     columnImage {
       gatsbyImageData

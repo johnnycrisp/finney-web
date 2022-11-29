@@ -43,7 +43,6 @@ const Header = ({ siteTitle }) => {
     }
   }}
   `)
-  console.log(result)
   return (
   <header>
   <HeaderStyles>

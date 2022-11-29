@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../styles/main.scss"
 import Header from "./Header"
 import styled from 'styled-components'
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 // import Seo from "./Seo"
 
@@ -39,8 +39,6 @@ const Layout = ({ children, pageData }) => {
   }
 }
   `)
-console.log('daatatata', data)
-console.log('first', pageData)
 const image = `src/images/SF-Copy-white.jpg`
   return (
     
