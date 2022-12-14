@@ -8,6 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/main.scss"
+import Logo from "../images/SF-Copy-white.jpg"
 import Header from "./Header"
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
@@ -50,7 +51,7 @@ const image = `src/images/SF-Copy-white.jpg`
         <main>{children}</main>
         <FooterStyles>
         <div>London-based DOP & Shooting Director</div>
-        <Link to=""><StaticImage src="../images/SF-Copy-white.jpg" alt="sam finney logo" /></Link>
+        <Link to=""><img src={Logo} alt="sam finney logo" /></Link>
         </FooterStyles>
   
     </>

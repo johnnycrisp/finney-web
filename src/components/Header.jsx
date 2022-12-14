@@ -4,7 +4,7 @@ import Link from "./Link"
 import styled from "styled-components"
 
 const HeaderStyles = styled.div`
-  margin-bottom: 2rem;
+  {'' /* margin-bottom: 2rem; */}
   display: flex;
   justify-content: space-between;
   align-items: center;
