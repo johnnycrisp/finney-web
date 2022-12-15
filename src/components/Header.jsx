@@ -44,7 +44,7 @@ const Header = ({ siteTitle }) => {
   }}
   `)
   return (
-  <header>
+  <header id="main-page">
   <HeaderStyles>
   <Link to=""><h1>sam finney</h1></Link> <div>{result.menu.menuItems.map(menuItem => (<Link key={menuItem.originalId}
       to={menuItem.destination.slug}

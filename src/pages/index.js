@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
 import DropDown from "../components/DropDown"
+import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Section from "../components/Section"
 import Seo from "../components/Seo"
@@ -20,9 +21,13 @@ const IndexStyles = styled.div`
 
 const Index = ({data}) => {
     const sections = data.datoCmsPage.sections
+    console.log('indexdata', data)
     return ( 
-    <Layout>
+      <>
+  <Hero image={data.datoCmsPage.image}/>
+  <Layout>
   <Seo title="Home"/>
+  
   
   <IndexStyles>
   <DropDown />
@@ -33,6 +38,8 @@ const Index = ({data}) => {
   })}
   </IndexStyles>
   </Layout>
+      </>
+  
   )
  
     }

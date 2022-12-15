@@ -18,7 +18,7 @@ const SectionStyles = styled.div`
 const Section = ({gridColumns}) => {
 console.log(gridColumns)
   return (
-    <SectionStyles className="section">
+    <SectionStyles id="section" className="section">
       
             {gridColumns.map(gridCol => (
                 <GridColumn
